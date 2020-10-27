@@ -9,7 +9,8 @@ const app =express();
 
 
 const whitelist=[process.env.FRONTEND_URL]
-
+console.log("la lista blanca")
+ console.log(whitelist)
 const corsOption={
 origin:(origin,callBack)=>
 {
