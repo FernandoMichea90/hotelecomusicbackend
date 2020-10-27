@@ -31,4 +31,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors())
 app.use('/',route())
-app.listen(5000)
+const port =process.env.PORT || 5000
+app.listen(port, '0.0.0.0',()=>
+{
+    console.log(process.env.HOST);
+    console.log(process.env.PORT);
+
+})
